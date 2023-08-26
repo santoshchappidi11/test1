@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="send(event)">
+        <label>name:</label>
+        <input type="text" id="name"><br>
+        <label>price</label>
+        <input type="number" id="price"><br>
+        <label >image</label><br>
+        <!-- <input type="image" id="image"><br> -->
+        <label>category</label>
+        <select name="" id="cat">
+            <option value="">mens clothes</option>
+            <option value="">womens clothes</option>
+            <option value="">kids clothes</option>
+            <option value=""> clothes</option>
+        </select><br>
+        <input type="submit" value="send">
+    </form>
+
+    <script>
+        function send(event){
+            event.preventDefault();
+
+            const username =document.getElementById('name').value;
+            const userprice = document.getElementById('price').value;
+            const userimage = document.getElementById('image').value;
+            const usercat = document.getElementById('cat')
+
+            if(username&& userprice&&userimage&&usercat ){
+                var array =JSON.parse(localStorage.getItem('users'))
+                 alert(ok)
+            }
+        } 
+    </script>
+</body>
+</html>
